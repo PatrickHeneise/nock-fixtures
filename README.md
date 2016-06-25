@@ -42,7 +42,7 @@ const options = {
 
     npm test
 
-# License
+## License
 
 The MIT License (MIT)
 
