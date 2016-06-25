@@ -1,57 +1,58 @@
 {
-    "name": "nock-fixtures",
-    "description": "Fixture loader for nock",
-    "tags": [
-        "Mock",
-        "HTTP",
-        "testing",
-        "isolation"
-    ],
-    "author": "Patrick Heneise <patrick@blended.io",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/PatrickHeneise/nock-fixtures.git"
-    },
-    "bugs": {
-        "url": "https://github.com/PatrickHeneise/nock-fixtures/issues"
-    },
-    "engines": [
-        "node >= 0.10.0"
-    ],
-    "main": "./nock-fixtures",
-    "dependencies": {
-        "nock": "^8.0.0"
-    },
-    "devDependencies": {
-        "changelog": "^1.0.7",
-        "greenkeeper": "^3.1.0",
-        "greenkeeper-postpublish": "^1.0.0",
-        "nyc": "^6.6.1",
-        "request": "^2.72.0",
-        "semantic-release": "^4.3.5",
-        "snyk": "^1.16.0",
-        "tap": "^5.8.0",
-        "tape": "^4.6.0"
-    },
-    "scripts": {
-        "pretest": "standard",
-        "test": "NODE_ENV=test nyc tap tests/*-test.js",
-        "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-        "postsemantic-release": "npm run coverage",
-        "postpublish": "greenkeeper-postpublish",
-        "prepublish": "npm run snyk-protect",
-        "changelog": "changelog nock all -m > CHANGELOG.md"
-    },
-    "license": "MIT",
-    "nyc": {
-        "exclude": [
-            "tests"
-        ]
-    },
-    "standard": {
-        "ignore": [
-            "/tests/fixtures"
-        ]
-    }
+  "name": "nock-fixtures",
+  "description": "Fixture loader for nock",
+  "tags": [
+    "Mock",
+    "HTTP",
+    "testing",
+    "isolation"
+  ],
+  "author": "Patrick Heneise <patrick@blended.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PatrickHeneise/nock-fixtures.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PatrickHeneise/nock-fixtures/issues"
+  },
+  "engines": [
+    "node >= 0.10.0"
+  ],
+  "main": "./nock-fixtures",
+  "dependencies": {
+    "nock": "^8.0.0"
+  },
+  "devDependencies": {
+    "changelog": "^1.0.7",
+    "coveralls": "^2.11.9",
+    "greenkeeper": "^3.1.0",
+    "greenkeeper-postpublish": "^1.0.0",
+    "nyc": "^6.6.1",
+    "request": "^2.72.0",
+    "semantic-release": "^4.3.5",
+    "snyk": "^1.16.0",
+    "tap": "^5.8.0",
+    "tape": "^4.6.0"
+  },
+  "scripts": {
+    "pretest": "standard",
+    "test": "snyk test && NODE_ENV=test nyc tap tests/*-test.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "postsemantic-release": "npm run coverage",
+    "postpublish": "greenkeeper-postpublish",
+    "prepublish": "npm run snyk-protect",
+    "changelog": "changelog nock all -m > CHANGELOG.md"
+  },
+  "license": "MIT",
+  "nyc": {
+    "exclude": [
+      "tests"
+    ]
+  },
+  "standard": {
+    "ignore": [
+      "/tests/fixtures"
+    ]
+  }
 }
