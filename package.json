@@ -20,7 +20,7 @@
   ],
   "main": "./nock-fixtures",
   "dependencies": {
-    "nock": "^9.0.0"
+    "nock": "^9.0.1"
   },
   "devDependencies": {
     "changelog": "^1.0.7",
