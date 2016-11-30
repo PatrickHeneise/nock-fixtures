@@ -27,7 +27,7 @@
     "coveralls": "^2.11.9",
     "greenkeeper": "^4.1.1",
     "greenkeeper-postpublish": "^1.0.0",
-    "nyc": "^9.0.1",
+    "nyc": "^10.0.0",
     "request": "^2.72.0",
     "semantic-release": "^6.3.2",
     "snyk": "^1.21.0",
